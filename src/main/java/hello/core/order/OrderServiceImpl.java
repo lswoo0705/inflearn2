@@ -10,8 +10,22 @@ import org.springframework.stereotype.Component;
 public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
+    
+    // 필드 주입은 테스트코드 외에 권장되지 않는다
 
-    @Autowired
+//    // setter 주입 방법
+//    @Autowired
+//    public void setMemberRepository(MemberRepository memberRepository) {
+//        this.memberRepository = memberRepository;
+//    }
+//
+//    @Autowired
+//    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
+//        this.discountPolicy = discountPolicy;
+//    }
+
+    // 생성자 주입 방법
+    @Autowired // 생성자가 하나일 때는 생략 가능(자동으로 적용됨)
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
