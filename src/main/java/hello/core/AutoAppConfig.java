@@ -17,8 +17,8 @@ import org.springframework.context.annotation.FilterType;
 public class AutoAppConfig {
 
     // 수동으로 등록한 빈이 자동보다 우선권을 가진다.(오버라이딩) -> 잡기 애매한 버그가 발생할 위험이 있다. -> 스프링부트 실행 시 오류가 발생됨
-    @Bean(name = "memoryMemberRepository")
-    MemberRepository memberRepository() {
-        return new MemoryMemberRepository();
-    }
+//    @Bean(name = "memoryMemberRepository")
+//    MemberRepository memberRepository() {
+//        return new MemoryMemberRepository();
+//    }
 }

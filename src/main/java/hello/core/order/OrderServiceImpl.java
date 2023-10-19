@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
-    
+
     // 필드 주입은 테스트코드 외에 권장되지 않는다
 
 //    // setter 주입 방법
